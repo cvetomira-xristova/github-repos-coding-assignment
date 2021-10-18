@@ -11,7 +11,7 @@ export async function getRepositoriesOfUser(userName) {
   return response;
 }
 
-export async function getRepository(userName, repoName) {
+export async function getRepository([userName, repoName]) {
   const response = await instance.get(`/repos/${userName}/${repoName}`);
   return response;
 }
