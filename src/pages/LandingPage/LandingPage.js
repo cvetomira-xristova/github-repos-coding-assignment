@@ -1,31 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './LandingPage.module.css';
 import ListItem from '../../components/ListItem/ListItem';
 import { getRepositoriesOfUser } from '../../api/RepositoryCalls';
+import useFetch from '../../hooks/useFetch';
 
 const nameOfUser = 'felangel';
 
 export default function LandingPage() {
-  const [reposData, setReposData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const response = await getRepositoriesOfUser(nameOfUser);
-        console.log(response);
-        setReposData(response.data);
-      } catch (error) {
-        console.log(error.response);
-        setHasError(true);
-      }
-      setIsLoading(false);
-    };
-
-    fetchData();
-  }, []);
+  const { data, hasError, isLoading } = useFetch(getRepositoriesOfUser, [nameOfUser]);
 
   return (
     <>
@@ -35,7 +17,7 @@ export default function LandingPage() {
         <>
           <h1 className={styles.h1}>Explore Repositories</h1>
           <div className={styles.reposContainer}>
-            {reposData?.map((repo) => (
+            {data?.map((repo) => (
               <ListItem
                 key={repo.id}
                 nameOfRepo={repo.name}
