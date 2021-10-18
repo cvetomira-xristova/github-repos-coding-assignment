@@ -1,0 +1,49 @@
+.avatar {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.goBackButton {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 20px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.goBackButtonContainer {
+  text-align: center;
+}
+
+.detailsContainer {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #d0d7de;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.detailsItem {
+  padding: 0.5rem;
+}
+
+.h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.h3 {
+  font-weight: 300;
+  color: var(--color-secondary);
+}

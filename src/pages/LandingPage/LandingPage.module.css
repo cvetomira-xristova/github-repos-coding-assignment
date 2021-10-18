@@ -1,0 +1,11 @@
+.h1 {
+    text-align: center;
+    color: #24292F;
+    margin: 2rem;
+}
+
+.reposContainer {
+    margin: 2rem;
+    border: 1px solid #d0d7de;
+    border-radius: 16px;
+}

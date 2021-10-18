@@ -1,0 +1,30 @@
+.avatar {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.avatarContainer, .detailsContainer {
+    margin: 20px;
+}
+
+.listItemContainer {
+    display: flex;
+    padding: 1rem;
+    word-break: break-word;
+}
+
+.h3 {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.h4 {
+    color: var(--color-secondary);
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+span {
+    color: var(--color-primary);
+    font-style: italic;
+}
